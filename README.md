@@ -25,10 +25,20 @@ To run this project, you'll need:
 - `duckduckgo_search`
 - `streamlit`
 
-## Installation
+## Configuration
 
-1. Clone the repository:
+### Model and Database Configuration:
+The following configurations can be adjusted based on your preferences:
+
+- **LLM_MODEL**: Set this to `"llama3.2"` to use the Llama3.2 model.
+- **CHROMA_DB_PATH**: This is the local path where ChromaDB will store the documents. By default, it's stored in the current working directory under the `chroma_db` folder.
+- **COLLECTION_NAME**: The name of the ChromaDB collection (default is `"news_articles_collection"`).
+
+Ensure that Ollama is running and accessible at `http://localhost:11434`. If it's running on a different port, modify the base URL in the configuration.
+
+## Running the Application
+
+To run the chatbot, execute the following:
 
 ```bash
-git clone <repository_url>
-cd <repository_directory>
+streamlit run app.py
